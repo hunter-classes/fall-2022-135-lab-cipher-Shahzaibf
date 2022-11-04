@@ -89,7 +89,7 @@ std::string encryptVigenere(std::string plaintext, std::string keyword) {
       }
     return result;
 }
-void helper(double instances[][26], std::string input) {
+void change(double instances[][26], std::string input) {
 	for (int i = 0; i < 26; i++) {
 		int count = 0;
 		std::string test = encryptCaesar(input,i);
@@ -112,7 +112,7 @@ std::string solve(std::string encrypted_string) {
             arr[a][b]=0;
         }
     }	
-	helper(arr, encrypted_string);
+	change(arr, encrypted_string);
 	double min = distanceformula(arr[0],freq);
 	int rot = 0;
 	for (int i = 1; i < 26; i++) {
